@@ -378,5 +378,6 @@ for (let i = 0; i < people.length; i++) {
   century.textContent = Math.ceil(people[i].died / 100);
   row.appendChild(century);
 
-  document.body.appendChild(row);
+  const table = document.querySelector('.dashboard');
+  table.appendChild(row);
 }
