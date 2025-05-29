@@ -359,6 +359,8 @@ console.log(people); // you can remove it
 
 for (let i = 0; i < people.length; i++) {
   const row = document.createElement('tr');
+  const tBody = document.createElement('tbody');
+  tBody.appendChild(row);
   const name = document.createElement('td');
   name.textContent = people[i].name;
   row.appendChild(name);
@@ -379,5 +381,5 @@ for (let i = 0; i < people.length; i++) {
   row.appendChild(century);
 
   const table = document.querySelector('.dashboard');
-  table.appendChild(row);
+  table.appendChild(tBody);
 }
